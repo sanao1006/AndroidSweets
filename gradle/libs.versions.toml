@@ -14,7 +14,7 @@ androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 hilt = "2.48.1"
 junit = "4.13.2"
-kotlin = "1.8.10"
+kotlin = "1.9.20"
 kotlinxCoroutines = "1.7.3"
 kotlinxSerializationJson = "1.6.1"
 ksp = "1.9.20-1.0.14"
@@ -23,6 +23,7 @@ retrofit = "2.9.0"
 retrofitKotlinxSerializationJson = "1.0.0"
 appcompat = "1.6.1"
 material = "1.10.0"
+jvmTarget = "17"
 
 [libraries]
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxComposeNavigation" }

@@ -25,5 +25,9 @@ gradlePlugin {
             id = "androidsweets.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
+        register("androidHilt") {
+            id = "androidsweets.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
     }
 }
