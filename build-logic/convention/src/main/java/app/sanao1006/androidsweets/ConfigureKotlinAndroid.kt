@@ -38,7 +38,7 @@ internal fun Project.configureKotlinAndroid(
                 // Enable experimental compose APIs
                 "-opt-in=com.google.accompanist.pager.ExperimentalPagerApi",
                 "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
-                "-opt-in=androidx.lifecycle.compose.ExperimentalLifecycleComposeApi",
+                "-opt-in=androidx.lifecycle.compose.ExperimentalLifecycleComposeApi"
             )
 
             // Set JVM target
