@@ -14,7 +14,7 @@
                 "org.jetbrains.kotlin.*"
             ]
         }
-    ]
+    ],
   "timezone": "Asia/Tokyo",
   "dependencyDashboard": false,
   "automerge": true,
