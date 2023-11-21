@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "packageRules": [
+      {
+            "groupName": "Kotlin",
+            "groupSlug": "kotlin",
+            "matchPackagePrefixes": [
+                "com.google.devtools.ksp"
+            ],
+            "matchPackagePatterns": [
+                "org.jetbrains.kotlin.*"
+            ]
+        }
+    ]
+  "timezone": "Asia/Tokyo",
+  "dependencyDashboard": false,
+  "automerge": true,
+  "branchConcurrentLimit": 0
+}
