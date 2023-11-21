@@ -13,6 +13,7 @@ java {
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.ktlint.plugin)
 }
 
 gradlePlugin {
@@ -28,6 +29,10 @@ gradlePlugin {
         register("androidHilt") {
             id = "androidsweets.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
+        }
+        register("androidKtLint") {
+            id = "androidsweets.android.ktlint"
+            implementationClass = "KtLintConventionPlugin"
         }
     }
 }

@@ -3,6 +3,7 @@ plugins {
     id("androidsweets.android.application")
     id("androidsweets.android.application.compose")
     id("androidsweets.android.hilt")
+    id("androidsweets.android.ktlint")
 }
 
 android {
