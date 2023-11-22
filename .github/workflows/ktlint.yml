@@ -6,7 +6,7 @@ on:
   pull_request:
     paths:
       - '.github/workflows/ktlint.yml'
-      - '**/*.kt'
+      - 'src/**/*.kt'
 
 jobs:
   ktlint:
