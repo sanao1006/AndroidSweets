@@ -34,6 +34,10 @@ gradlePlugin {
             id = "androidsweets.android.ktlint"
             implementationClass = "KtLintConventionPlugin"
         }
+        register("androidLibrary") {
+            id = "androidsweets.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
     }
 }
 
