@@ -8,4 +8,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: minjunkweon/action-ktlint-auto-review@v1
         with:
-          github_token: ${{ secrets.MY_SECRET }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
