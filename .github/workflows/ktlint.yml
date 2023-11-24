@@ -13,7 +13,7 @@ jobs:
       - name: ktlint
         uses: ScaCap/action-ktlint@master
         with:
-          github_token: ${{ secrets.github_token }}
+          github_token: ${{ secrets.MY_SECRET }}
           fail_on_error: true
           reporter: github-pr-review # Change reporter
           ktlint_version: latest
