@@ -30,15 +30,16 @@ internal fun Project.configureKotlinAndroid(commonExtension: CommonExtension<*, 
             allWarningsAsErrors = properties["warningsAsErrors"] as? Boolean ?: false
 
             freeCompilerArgs =
-                freeCompilerArgs + listOf(
-                "-opt-in=kotlin.RequiresOptIn",
-                // Enable experimental coroutines APIs, including Flow
-                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-                // Enable experimental compose APIs
-                "-opt-in=com.google.accompanist.pager.ExperimentalPagerApi",
-                "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
-                "-opt-in=androidx.lifecycle.compose.ExperimentalLifecycleComposeApi",
-            )
+                freeCompilerArgs +
+                        listOf(
+                    "-opt-in=kotlin.RequiresOptIn",
+                    // Enable experimental coroutines APIs, including Flow
+                    "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                    // Enable experimental compose APIs
+                    "-opt-in=com.google.accompanist.pager.ExperimentalPagerApi",
+                    "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
+                    "-opt-in=androidx.lifecycle.compose.ExperimentalLifecycleComposeApi",
+                )
 
             // Set JVM target
             jvmTarget = JavaVersion.VERSION_17.toString()
