@@ -1,15 +1,14 @@
 name: ktlint
-
-on:
-  pull_request:
-    paths:
-      - "**/*.kt"
-      - ".github/workflows/ktlint.yml"
+on: [pull_request]
 jobs:
-    ktlint:
-      runs-on: ubuntu-latest
-      steps:
-        - name: "checkout"
-          uses: actions/checkout@v2
-        - name: "ktlint"
-          uses: "vroy/gha-kotlin-linter@v1"
+  ktlint:
+    name: Check Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone PR
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Run Ktlint
+        uses: lucasnlm/ktlint-action@master
