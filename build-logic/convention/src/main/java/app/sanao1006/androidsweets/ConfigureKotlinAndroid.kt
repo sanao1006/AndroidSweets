@@ -9,9 +9,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 /**
  * Configure base Kotlin with Android options
  */
-internal fun Project.configureKotlinAndroid(
-    commonExtension: CommonExtension<*, *, *, *, *>
-) {
+internal fun Project.configureKotlinAndroid(commonExtension: CommonExtension<*, *, *, *, *>) {
     commonExtension.apply {
         compileSdk = 34
 
@@ -31,15 +29,17 @@ internal fun Project.configureKotlinAndroid(
         kotlinOptions {
             allWarningsAsErrors = properties["warningsAsErrors"] as? Boolean ?: false
 
-            freeCompilerArgs = freeCompilerArgs + listOf(
-                "-opt-in=kotlin.RequiresOptIn",
-                // Enable experimental coroutines APIs, including Flow
-                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-                // Enable experimental compose APIs
-                "-opt-in=com.google.accompanist.pager.ExperimentalPagerApi",
-                "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
-                "-opt-in=androidx.lifecycle.compose.ExperimentalLifecycleComposeApi"
-            )
+            freeCompilerArgs =
+                freeCompilerArgs +
+                listOf(
+                    "-opt-in=kotlin.RequiresOptIn",
+                    // Enable experimental coroutines APIs, including Flow
+                    "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                    // Enable experimental compose APIs
+                    "-opt-in=com.google.accompanist.pager.ExperimentalPagerApi",
+                    "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
+                    "-opt-in=androidx.lifecycle.compose.ExperimentalLifecycleComposeApi",
+                )
 
             // Set JVM target
             jvmTarget = JavaVersion.VERSION_17.toString()
