@@ -2,7 +2,7 @@
 plugins {
     id("androidsweets.android.library")
     id("androidsweets.android.library.compose")
-    id("androidsweets.android.ktlint")
+    id("androidsweets.spotless")
 }
 
 android {
