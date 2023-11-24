@@ -1,6 +1,7 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     `kotlin-dsl`
+    alias(libs.plugins.ktlint)
 }
 
 group = "app.sanao1006.androidsweets.buildlogic"
@@ -14,6 +15,10 @@ dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ktlint.plugin)
+}
+
+ktlint {
+    version = libs.versions.ktlint.get()
 }
 
 gradlePlugin {
