@@ -64,4 +64,6 @@ dependencies {
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.viewModelCompose)
+
+    implementation(project(":core:ui"))
 }

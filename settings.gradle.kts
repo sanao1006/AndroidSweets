@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidSweets"
 include(":app")
+include(":core:ui")
