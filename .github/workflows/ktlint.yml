@@ -1,17 +1,11 @@
 name: ktlint
-on: [pull_request]
-jobs:
-  ktlint:
-    name: Check Code Quality
-    runs-on: ubuntu-latest
 
+on: [ pull_request ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: Clone repo
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 1
-      - name: ktlint
-        uses: ScaCap/action-ktlint@master
+      - uses: actions/checkout@v2
+      - uses: minjunkweon/action-ktlint-auto-review@v1
         with:
           github_token: ${{ secrets.MY_SECRET }}
-          reporter: github-pr-review # Change reporter
