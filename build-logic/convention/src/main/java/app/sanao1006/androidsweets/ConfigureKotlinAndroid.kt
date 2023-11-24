@@ -31,7 +31,7 @@ internal fun Project.configureKotlinAndroid(commonExtension: CommonExtension<*, 
 
             freeCompilerArgs =
                 freeCompilerArgs +
-                        listOf(
+                listOf(
                     "-opt-in=kotlin.RequiresOptIn",
                     // Enable experimental coroutines APIs, including Flow
                     "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
