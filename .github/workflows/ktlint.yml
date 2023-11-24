@@ -1,11 +1,14 @@
 name: ktlint
-
-on: [ pull_request ]
+on: [pull_request]
 jobs:
-  build:
+  ktlint:
+    name: Check Code Quality
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: minjunkweon/action-ktlint-auto-review@v1
+      - name: Clone PR
+        uses: actions/checkout@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+      - name: Run Ktlint
+        uses: lucasnlm/ktlint-action@master
