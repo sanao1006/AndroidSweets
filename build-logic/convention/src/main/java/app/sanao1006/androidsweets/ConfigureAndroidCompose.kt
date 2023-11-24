@@ -17,7 +17,8 @@ internal fun Project.configureAndroidCompose(
         }
 
         composeOptions {
-            kotlinCompilerExtensionVersion = libs.findVersion("androidxComposeCompiler").get().toString()
+            kotlinCompilerExtensionVersion =
+                libs.findVersion("androidxComposeCompiler").get().toString()
         }
 
         kotlinOptions {
@@ -34,7 +35,8 @@ private fun Project.buildComposeMetricsParameters(): List<String> {
         val metricsFolder = File(project.buildDir, "compose-metrics")
         metricParameters.add("-P")
         metricParameters.add(
-            "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" + metricsFolder.absolutePath
+            "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination="
+                    + metricsFolder.absolutePath,
         )
     }
 
@@ -44,7 +46,8 @@ private fun Project.buildComposeMetricsParameters(): List<String> {
         val reportsFolder = File(project.buildDir, "compose-reports")
         metricParameters.add("-P")
         metricParameters.add(
-            "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=" + reportsFolder.absolutePath
+            "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination="
+                    + reportsFolder.absolutePath,
         )
     }
     return metricParameters.toList()
