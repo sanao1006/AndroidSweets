@@ -1,7 +1,6 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     `kotlin-dsl`
-    alias(libs.plugins.ktlint)
 }
 
 group = "app.sanao1006.androidsweets.buildlogic"
@@ -14,12 +13,9 @@ java {
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
-    compileOnly(libs.ktlint.plugin)
+    compileOnly(libs.spotless.gradlePlugin)
 }
 
-ktlint {
-    version = libs.versions.ktlint.get()
-}
 
 gradlePlugin {
     plugins {
@@ -35,10 +31,6 @@ gradlePlugin {
             id = "androidsweets.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
-        register("androidKtLint") {
-            id = "androidsweets.android.ktlint"
-            implementationClass = "KtLintConventionPlugin"
-        }
         register("androidLibrary") {
             id = "androidsweets.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
@@ -46,6 +38,10 @@ gradlePlugin {
         register("androidLibraryCompose") {
             id = "androidsweets.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidSpotless") {
+            id = "androidsweets.spotless"
+            implementationClass = "SpotlessConventionPlugin"
         }
     }
 }
