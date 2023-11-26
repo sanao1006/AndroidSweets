@@ -25,6 +25,7 @@ appcompat = "1.6.1"
 material = "1.10.0"
 jvmTarget = "17"
 spotless = "6.7.0"
+eithernet = "1.8.0"
 
 [libraries]
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxComposeNavigation" }
@@ -63,6 +64,7 @@ okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",
 # retrofit
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-kotlin-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofitKotlinxSerializationJson" }
+eithernet = { group = "com.slack.eithernet", name = "eithernet", version.ref = "eithernet" }
 
 # test
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -72,7 +74,6 @@ ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 spotless-gradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
