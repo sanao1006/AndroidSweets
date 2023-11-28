@@ -1,6 +1,5 @@
-#  AndroidSweets
+#  AndroidSweets (🚧 WIP!!)
 ## 概要
-※ WIP  
 [AndroidDagashi](https://androiddagashi.github.io/) の購読アプリです。通知などを用いてコツコツと AndroidDagashi の記事を読むことを習慣化させたり、タグやお気に入り機能で読みたい記事を手軽にチョイスできるようなアプリを目指しています
 
 ## 技術スタック
