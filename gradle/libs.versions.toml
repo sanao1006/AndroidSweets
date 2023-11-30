@@ -1,5 +1,5 @@
 [versions]
-agp = "8.1.4"
+agp = "8.2.0"
 androidxLifecycle = "2.6.2"
 androidxActivity = "1.8.1"
 androidxCore = "1.12.0"
