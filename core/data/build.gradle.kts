@@ -18,6 +18,8 @@ android {
 dependencies {
     implementation(project(":core:network"))
 
+    implementation(libs.eithernet)
+    implementation(libs.okhttp.logging)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
