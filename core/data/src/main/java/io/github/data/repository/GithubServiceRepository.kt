@@ -9,5 +9,5 @@ interface GithubServiceRepository {
 
     fun getMilestone(milestoneId: String): Flow<MilestoneResponse>
 
-    fun getIssuesForMilestone(milestoneNum: String): Flow<IssuesResponse>
+    fun getIssuesForMilestone(milestoneNum: String): Flow<List<IssuesResponse>>
 }
