@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class GithubServiceRepositoryImpl @Inject constructor(
-    private val androidSweetsNetwork: AndroidSweetsNetwork,
+    private val androidSweetsNetwork: AndroidSweetsNetwork
 ) : GithubServiceRepository {
     override fun getLatestMilestone(): Flow<MilestoneResponse> = flow {
         emit(
