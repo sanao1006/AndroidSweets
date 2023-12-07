@@ -26,6 +26,8 @@ material = "1.10.0"
 jvmTarget = "17"
 spotless = "6.7.0"
 eithernet = "1.8.0"
+mockk = "1.13.8"
+truth = "1.1.4"
 
 [libraries]
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxComposeNavigation" }
@@ -67,6 +69,8 @@ retrofit-kotlin-serialization = { group = "com.jakewharton.retrofit", name = "re
 eithernet = { group = "com.slack.eithernet", name = "eithernet", version.ref = "eithernet" }
 
 # test
+mockk = { group = "io.mockk", name = "mockk-android", version.ref = "mockk" }
+truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }

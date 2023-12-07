@@ -9,6 +9,12 @@ plugins {
 
 android {
     namespace = "io.github.network"
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+            isReturnDefaultValues = true
+        }
+    }
 }
 
 dependencies {
@@ -18,4 +24,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.eithernet)
     implementation(libs.okhttp.logging)
+
+    testImplementation(libs.mockk)
+    testImplementation(libs.truth)
 }
