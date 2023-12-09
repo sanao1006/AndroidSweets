@@ -51,6 +51,6 @@ fun MilestoneResponse.toMilestone(): Milestone {
         number = this.number,
         openIssues = this.openIssues,
         title = this.title,
-        url = this.url,
+        url = this.url
     )
 }

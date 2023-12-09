@@ -76,6 +76,6 @@ fun IssuesResponse.toIssue(): Issue {
         labelsUrl = this.labelsUrl,
         milestone = this.milestone,
         nodeId = this.nodeId,
-        number = this.number,
+        number = this.number
     )
 }

@@ -12,5 +12,5 @@ data class Issue(
     val labelsUrl: String,
     val milestone: Milestone,
     val nodeId: String,
-    val number: Int,
+    val number: Int
 )
