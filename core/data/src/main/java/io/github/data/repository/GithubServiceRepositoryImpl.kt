@@ -1,33 +1,24 @@
 package io.github.data.repository
 
-import io.github.data.RequestHelper
-import io.github.network.model.IssuesResponse
-import io.github.network.model.MilestoneResponse
-import io.github.network.remote.AndroidSweetsNetwork
+import io.github.network.model.Issue
+import io.github.network.model.Milestone
+import io.github.network.remote.AndroidSweetsDataSource
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class GithubServiceRepositoryImpl @Inject constructor(
-    private val androidSweetsNetwork: AndroidSweetsNetwork
+    private val androidSweetsDataSource: AndroidSweetsDataSource
 ) : GithubServiceRepository {
-    override fun getLatestMilestone(): Flow<MilestoneResponse> = flow {
-        emit(
-            RequestHelper.executeMileStoneRequest { androidSweetsNetwork.getLatestMilestone() }[0]
-        )
+    override fun getLatestMilestone(): Flow<Milestone> = flow {
+        emit(androidSweetsDataSource.getLatestMilestone())
     }
 
-    override fun getMilestone(milestoneId: String): Flow<MilestoneResponse> = flow {
-        emit(
-            RequestHelper.executeMileStoneRequest { androidSweetsNetwork.getMilestone(milestoneId) }
-        )
+    override fun getMilestone(milestoneId: String): Flow<Milestone> = flow {
+        emit(androidSweetsDataSource.getMilestone(milestoneId = milestoneId))
     }
 
-    override fun getIssuesForMilestone(milestoneNum: String): Flow<List<IssuesResponse>> = flow {
-        emit(
-            RequestHelper.executeIssueRequest {
-                androidSweetsNetwork.getIssuesForMilestone(milestoneNum)
-            }
-        )
+    override fun getIssuesForMilestone(milestoneNum: String): Flow<List<Issue>> = flow {
+        emit(androidSweetsDataSource.getIssuesForMilestone(milestoneId = milestoneNum))
     }
 }

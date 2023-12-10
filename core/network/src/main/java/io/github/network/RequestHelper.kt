@@ -1,4 +1,4 @@
-package io.github.data
+package io.github.network
 
 import com.slack.eithernet.ApiResult
 import io.github.network.model.ErrorIssue
