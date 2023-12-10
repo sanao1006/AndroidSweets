@@ -10,7 +10,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface AndroidSweetsNetwork {
+interface AndroidSweetsNetworkApi {
     @DecodeErrorBody
     @GET("milestones")
     suspend fun getLatestMilestone(): ApiResult<List<MilestoneResponse>, ErrorMilestone>

@@ -62,3 +62,20 @@ data class IssuesResponse(
     @SerialName("user")
     val user: User
 )
+
+fun IssuesResponse.toIssue(): Issue {
+    return Issue(
+        assignee = this.assignee,
+        assignees = this.assignees,
+        body = this.body,
+        createdAt = this.createdAt,
+        eventsUrl = this.eventsUrl,
+        htmlUrl = this.htmlUrl,
+        id = this.id,
+        labels = this.labels,
+        labelsUrl = this.labelsUrl,
+        milestone = this.milestone,
+        nodeId = this.nodeId,
+        number = this.number
+    )
+}
