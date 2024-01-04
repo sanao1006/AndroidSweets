@@ -1,0 +1,3 @@
+package io.github.androidsweetsnetworktest
+
+class AndroidSweetsNetworkTest
