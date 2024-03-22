@@ -24,7 +24,7 @@ retrofitKotlinxSerializationJson = "1.0.0"
 appcompat = "1.6.1"
 material = "1.11.0"
 jvmTarget = "17"
-spotless = "6.7.0"
+spotless = "6.25.0"
 eithernet = "1.8.1"
 
 [libraries]
