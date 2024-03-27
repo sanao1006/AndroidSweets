@@ -7,10 +7,9 @@ import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun AndroidSweetsNavHost(
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier
 ) {
     val navController = rememberNavController()
     NavHost(navController = rememberNavController(), startDestination = Route.HOME.name) {
-
     }
 }

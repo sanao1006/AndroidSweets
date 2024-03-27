@@ -13,11 +13,13 @@ import app.sanao1006.androidsweets.nav.AndroidSweetsNavHost
 fun SweetsApp(modifier: Modifier = Modifier) {
     Scaffold(
         topBar = {},
-        bottomBar = { Text(text = "hello")},
-    ) { paddingValues->
-        Column(modifier = modifier
-            .fillMaxSize()
-            .padding(paddingValues)) {
+        bottomBar = { Text(text = "hello") }
+    ) { paddingValues ->
+        Column(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+        ) {
             AndroidSweetsNavHost()
         }
     }
