@@ -43,6 +43,10 @@ gradlePlugin {
             id = "androidsweets.spotless"
             implementationClass = "SpotlessConventionPlugin"
         }
+        register("androidFeature") {
+            id = "androidsweets.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
     }
 }
 

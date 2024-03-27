@@ -54,7 +54,7 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.material)
+    implementation(libs.androidx.compose.material)
     implementation(libs.androidx.startup)
 
     implementation(libs.androidx.compose.ui)
@@ -65,5 +65,6 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.viewModelCompose)
 
+    implementation(projects.feature.home)
     implementation(project(":core:ui"))
 }

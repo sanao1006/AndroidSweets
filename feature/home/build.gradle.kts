@@ -1,6 +1,6 @@
 plugins {
-    id("androidsweets.android.application")
-    id("androidsweets.android.application.compose")
+    id("androidsweets.android.feature")
+    id("androidsweets.android.library.compose")
     id("androidsweets.android.hilt")
     id("androidsweets.spotless")
 }
@@ -35,9 +35,6 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.appcompat)
-    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

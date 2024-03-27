@@ -4,6 +4,7 @@ import com.android.build.api.dsl.CommonExtension
 import java.io.File
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 
 internal fun Project.configureAndroidCompose(commonExtension: CommonExtension<*, *, *, *, *>) {
@@ -19,9 +20,20 @@ internal fun Project.configureAndroidCompose(commonExtension: CommonExtension<*,
                 libs.findVersion("androidxComposeCompiler").get().toString()
         }
 
-        kotlinOptions {
-            freeCompilerArgs = freeCompilerArgs + buildComposeMetricsParameters()
+        dependencies {
+            val bom = libs.findLibrary("androidx-compose-bom").get()
+            add("implementation", platform(bom))
+            add("androidTestImplementation", platform(bom))
+            add("implementation", libs.findLibrary("androidx-compose-ui-tooling-preview").get())
+            add("implementation", libs.findLibrary("androidx-compose-material").get())
+            add("implementation", libs.findLibrary("androidx-compose-material-iconsExtended").get())
+            add("debugImplementation", libs.findLibrary("androidx-compose-ui-tooling").get())
         }
+
+
+//        kotlinOptions {
+//            freeCompilerArgs = freeCompilerArgs + buildComposeMetricsParameters()
+//        }
     }
 }
 
